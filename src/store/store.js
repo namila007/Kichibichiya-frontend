@@ -19,6 +19,14 @@ const stores = new Vuex.Store({
     user: null,
     isUserLogged: false
   },
+  getters: {
+    user: (state) => {
+      return state.user
+    },
+    token: (state) => {
+      return state.token
+    }
+  },
   plugins: [vuexLocalStorage.plugin],
   mutations: {
     setToken (state, token) {

@@ -58,6 +58,8 @@ export default {
       } catch (err) {
         this.failbox = true
         this.error = err.message
+      } finally {
+        this.$router.push('/')
       }
     }
   }

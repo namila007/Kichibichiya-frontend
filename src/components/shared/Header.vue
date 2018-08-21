@@ -33,14 +33,18 @@
           </span>
         </v-toolbar-title>
         <v-list>
-          <v-list-tile >
+          <v-list-tile :to="{
+              name: 'Profile'}
+              " exact>
             <v-list-tile-title >Profile</v-list-tile-title>
           </v-list-tile>
-          <v-list-tile>
+          <v-list-tile :to="{
+              name: 'Setting'}
+              " exact>
             <v-list-tile-title >Setting</v-list-tile-title>
           </v-list-tile>
-          <v-list-tile>
-            <v-list-tile-title @click="signout" >SignOut</v-list-tile-title>
+          <v-list-tile @click="signout" exact>
+            <v-list-tile-title  >SignOut</v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
